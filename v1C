@@ -1,0 +1,39 @@
+while True: 
+    
+    print('Do you want to do some operation? [Y]es or [N]o')
+    E = input('').upper().startswith('Y')
+    if E is False: 
+        print('You left the program.')  
+        break
+    else:
+        
+        try:
+            n_1 = input('Enter a number: ')
+            n_2 = input('Enter an other number: ')
+            n_1F = float(n_1)
+            n_2F = float(n_2)
+            print('Operations accepted: ')
+            op = input('What operation do you want to perform? [+] | [-] | [*] | [/]:  ')
+            nv = True
+            
+        except:
+            nv = None
+            if nv is None:
+                print('try entering with a valid number ')
+                continue 
+
+            if len(op) > 1: 
+                print('try entering with an operation valid')
+                continue 
+        
+        if op == '+': #and n_1.isdigit and n_2.isdigit: 
+           print(n_1F + n_2F)
+        elif op == '-': #and n_1.isdigit and n_2.isdigit:
+            print(n_1F - n_2F)
+        elif op == '*': #and n_1.isdigit and n_2.isdigit: 
+            print(n_1F * n_2F)
+        elif op == '/': #and n_1.isdigit and n_2.isdigit:
+            print(n_1F / n_2F)
+        else:
+                print('Thats not a operator')
+                continue
